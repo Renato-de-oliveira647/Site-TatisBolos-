@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900">
+  <defs>
+    <linearGradient id="bg4" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#fef4de"/>
+      <stop offset="100%" stop-color="#ffd9de"/>
+    </linearGradient>
+    <linearGradient id="igGrad4" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f9c7d8"/>
+      <stop offset="50%" stop-color="#f0a7d1"/>
+      <stop offset="100%" stop-color="#e788a9"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="900" fill="url(#bg4)"/>
+  <circle cx="180" cy="200" r="75" fill="#fff2c6" opacity="0.8"/>
+  <circle cx="740" cy="180" r="100" fill="#f2b0c4" opacity="0.8"/>
+  <g>
+    <ellipse cx="250" cy="560" rx="120" ry="130" fill="#e79dbc"/>
+    <ellipse cx="450" cy="520" rx="130" ry="160" fill="#f8d67d"/>
+    <ellipse cx="650" cy="560" rx="120" ry="130" fill="#a8d7b4"/>
+    <circle cx="250" cy="490" r="32" fill="#fffef8"/>
+    <circle cx="450" cy="474" r="34" fill="#fffef8"/>
+    <circle cx="650" cy="490" r="32" fill="#fffef8"/>
+  </g>
+
+  <g>
+    <rect x="250" y="250" width="400" height="400" rx="95" fill="url(#igGrad4)" opacity="0.9"/>
+    <rect x="315" y="315" width="270" height="270" rx="70" fill="#fffafc" opacity="0.95"/>
+    <circle cx="450" cy="450" r="82" fill="none" stroke="#d74486" stroke-width="16"/>
+    <circle cx="450" cy="450" r="40" fill="none" stroke="#d74486" stroke-width="12"/>
+    <circle cx="525" cy="375" r="16" fill="#d74486"/>
+    <text x="450" y="612" text-anchor="middle" font-size="30" font-family="Arial, sans-serif" font-weight="700" fill="#7d3d52">@tatis_bolos</text>
+    <text x="450" y="648" text-anchor="middle" font-size="18" font-family="Arial, sans-serif" letter-spacing="3" fill="#8d5a66">TATIS BOLOS</text>
+  </g>
+</svg>

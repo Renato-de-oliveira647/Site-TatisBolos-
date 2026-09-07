@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900">
+  <defs>
+    <linearGradient id="bg2" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#fff6ef"/>
+      <stop offset="100%" stop-color="#f9d7d7"/>
+    </linearGradient>
+    <linearGradient id="igGrad2" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f9c7d8"/>
+      <stop offset="50%" stop-color="#f0a7d1"/>
+      <stop offset="100%" stop-color="#e788a9"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="900" fill="url(#bg2)"/>
+  <circle cx="180" cy="190" r="72" fill="#fce9bf" opacity="0.8"/>
+  <circle cx="760" cy="220" r="90" fill="#f7bfd0" opacity="0.8"/>
+  <path d="M220 570 L430 300 L660 570 Z" fill="#f5d7a9"/>
+  <path d="M180 600 L450 250 L720 600 Z" fill="#d8879b" opacity="0.9"/>
+  <path d="M300 570 L450 370 L600 570 Z" fill="#fff1df"/>
+  <circle cx="355" cy="500" r="26" fill="#ffd5a3"/>
+  <circle cx="545" cy="500" r="26" fill="#ffd5a3"/>
+  <circle cx="450" cy="440" r="30" fill="#f8b04d"/>
+
+  <g>
+    <rect x="250" y="250" width="400" height="400" rx="95" fill="url(#igGrad2)" opacity="0.9"/>
+    <rect x="315" y="315" width="270" height="270" rx="70" fill="#fffafc" opacity="0.95"/>
+    <circle cx="450" cy="450" r="82" fill="none" stroke="#d74486" stroke-width="16"/>
+    <circle cx="450" cy="450" r="40" fill="none" stroke="#d74486" stroke-width="12"/>
+    <circle cx="525" cy="375" r="16" fill="#d74486"/>
+    <text x="450" y="612" text-anchor="middle" font-size="30" font-family="Arial, sans-serif" font-weight="700" fill="#7d3d52">@tatis_bolos</text>
+    <text x="450" y="648" text-anchor="middle" font-size="18" font-family="Arial, sans-serif" letter-spacing="3" fill="#8d5a66">TATIS BOLOS</text>
+  </g>
+</svg>

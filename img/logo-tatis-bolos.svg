@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 260">
+  <defs>
+    <linearGradient id="logoGrad" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f8c9d8"/>
+      <stop offset="50%" stop-color="#ef9dc0"/>
+      <stop offset="100%" stop-color="#df7ea4"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="260" rx="28" fill="#fffafc"/>
+
+  <g transform="translate(32,25)">
+    <rect x="0" y="0" width="180" height="180" rx="42" fill="url(#logoGrad)"/>
+    <rect x="34" y="34" width="112" height="112" rx="28" fill="#fffafc"/>
+    <circle cx="90" cy="90" r="34" fill="none" stroke="#d74486" stroke-width="10"/>
+    <circle cx="90" cy="90" r="16" fill="none" stroke="#d74486" stroke-width="7"/>
+    <circle cx="116" cy="62" r="8" fill="#d74486"/>
+  </g>
+
+  <g transform="translate(236,76)">
+    <text x="0" y="50" font-size="52" font-family="Arial, sans-serif" font-weight="700" fill="#7b3757">TATIS</text>
+    <text x="0" y="104" font-size="52" font-family="Arial, sans-serif" font-weight="700" fill="#d74486">BOLOS</text>
+    <text x="2" y="138" font-size="16" font-family="Arial, sans-serif" letter-spacing="6" fill="#8d5a66">CONFEITARIA</text>
+  </g>
+</svg>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tatis Bolos</title>
+    <meta
+      name="description"
+      content="Sistema de pedidos e controle financeiro para confeitaria."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <img class="brand-logo" src="./img/logo-tatis-bolos.svg" alt="Logo Tatis Bolos" />
+        <div class="brand-copy">
+          <strong>Tatis Bolos</strong>
+          <span>@tatis_bolos</span>
+        </div>
+      </div>
+      <nav class="topbar-nav">
+        <a href="#pedidos">Pedidos</a>
+        <a href="#financeiro">Financeiro</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Doce, elegante e sob medida</p>
+        <h1>Seu bolo dos sonhos, com controle completo do negócio.</h1>
+        <p class="subtitle">
+          Registre pedidos, acompanhe entregas e monitore entradas e saídas do caixa
+          em um único lugar.
+        </p>
+        <div class="hero-actions">
+          <a class="primary-btn" href="#pedidos">Cadastrar pedido</a>
+          <a
+            class="secondary-btn"
+            href="https://instagram.com/tatis_bolos"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Instagram @tatis_bolos
+          </a>
+          <a
+            class="secondary-btn"
+            href="https://wa.me/5511949297303"
+            target="_blank"
+            rel="noreferrer"
+          >
+            WhatsApp (11) 94929-7303
+          </a>
+          <button id="print-all-orders" class="secondary-btn" type="button">
+            Imprimir pedidos
+          </button>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-label="Galeria destacada da confeitaria">
+        <div class="featured-photo-wrap">
+          <img src="./img/bolo-aniversario.svg" alt="Bolo de aniversário da Tatis Bolos" />
+          <div class="floating-badge">
+            <strong>+120</strong>
+            <span>bolos entregues</span>
+          </div>
+        </div>
+
+        <div class="summary-grid" aria-label="Resumo financeiro e de pedidos">
+          <article class="summary-card accent-pink">
+            <span>Pedidos</span>
+            <strong id="summary-orders">0</strong>
+          </article>
+          <article class="summary-card accent-gold">
+            <span>Receita</span>
+            <strong id="summary-revenue">R$ 0,00</strong>
+          </article>
+          <article class="summary-card accent-green">
+            <span>Entradas</span>
+            <strong id="summary-entries">R$ 0,00</strong>
+          </article>
+          <article class="summary-card accent-red">
+            <span>Saídas</span>
+            <strong id="summary-exits">R$ 0,00</strong>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery-section panel" aria-label="Galeria de bolos e Trabalhos da Tatis Bolos">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">Nossos doces</p>
+          <h2>Bolos que encantam cada festa</h2>
+        </div>
+      </div>
+
+      <div class="gallery-grid">
+        <article class="gallery-card">
+          <img src="./img/bolo-aniversario.svg" alt="Bolo de aniversário" />
+          <div class="gallery-card-info">
+            <h3>Bolo de Aniversário</h3>
+            <p>Personalizados para comemorar cada momento com sabor e delicadeza.</p>
+          </div>
+        </article>
+
+        <article class="gallery-card">
+          <img src="./img/detalhes-cobertura.svg" alt="Detalhes de cobertura" />
+          <div class="gallery-card-info">
+            <h3>Detalhes Premium</h3>
+            <p>Revestimentos elegantes, texturas refinadas e acabamento impecável.</p>
+          </div>
+        </article>
+
+        <article class="gallery-card">
+          <img src="./img/bolo-personalizado.svg" alt="Bolo personalizado" />
+          <div class="gallery-card-info">
+            <h3>Bolo Personalizado</h3>
+            <p>Temas, cores e mensagens feitos para refletir a sua história.</p>
+          </div>
+        </article>
+
+        <article class="gallery-card">
+          <img src="./img/doces-festa.svg" alt="Doces para festa" />
+          <div class="gallery-card-info">
+            <h3>Doces para Festa</h3>
+            <p>Uma experiência doce completa com peças especiais para eventos.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="stories-section panel" id="stories">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">Instagram</p>
+          <h2>Stories e fotos da Tatis Bolos</h2>
+        </div>
+        <a
+          class="secondary-btn"
+          href="https://instagram.com/tatis_bolos"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Ver no Instagram
+        </a>
+      </div>
+
+      <form id="story-form" class="story-form">
+        <input type="text" name="title" placeholder="Título do story" required />
+        <input type="url" name="imageUrl" placeholder="URL da imagem do story" required />
+        <button type="submit" class="primary-btn">Adicionar story</button>
+      </form>
+
+      <div id="stories-list" class="stories-list" aria-live="polite"></div>
+    </section>
+
+    <main class="app-shell">
+      <section id="pedidos" class="panel">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Pedidos</p>
+            <h2>Novo pedido</h2>
+          </div>
+        </div>
+
+        <form id="order-form" class="form-grid">
+          <label>
+            Nome do cliente
+            <input type="text" name="cliente" placeholder="Ex.: Maria Souza" required />
+          </label>
+
+          <label>
+            Tipo do bolo
+            <input type="text" name="tipo" placeholder="Ex.: Chocolate com morango" required />
+          </label>
+
+          <label>
+            Tamanho
+            <select name="tamanho">
+              <option value="Pequeno">Pequeno</option>
+              <option value="Médio" selected>Médio</option>
+              <option value="Grande">Grande</option>
+              <option value="Personalizado">Personalizado</option>
+            </select>
+          </label>
+
+          <label>
+            Data de entrega
+            <input type="date" name="dataEntrega" required />
+          </label>
+
+          <label>
+            Valor
+            <input type="number" name="valor" min="0" step="0.01" placeholder="250.00" required />
+          </label>
+
+          <label>
+            Status
+            <select name="status">
+              <option value="Pendente">Pendente</option>
+              <option value="Em produção">Em produção</option>
+              <option value="Pronto">Pronto</option>
+              <option value="Entregue">Entregue</option>
+            </select>
+          </label>
+
+          <label class="full-width">
+            Observações
+            <textarea name="observacoes" rows="3" placeholder="Detalhes do sabor, cobertura, mensagem, etc."></textarea>
+          </label>
+
+          <label class="checkbox-field full-width">
+            <input type="checkbox" name="lgpd" required />
+            <span>
+              Ao prosseguir, confirmo que li e concordo com a Política de Privacidade da
+              Tatis Bolos e autorizo o uso dos meus dados para atendimento, confirmação do
+              pedido e organização da entrega, conforme a LGPD.
+            </span>
+          </label>
+
+          <div class="form-actions full-width">
+            <button type="submit" class="primary-btn">Salvar pedido</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="panel">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Lista</p>
+            <h2>Pedidos recebidos</h2>
+          </div>
+          <button id="print-orders" class="secondary-btn" type="button">Imprimir pedidos</button>
+        </div>
+        <div id="orders-list" class="orders-list" aria-live="polite"></div>
+      </section>
+
+      <section id="financeiro" class="panel">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Financeiro</p>
+            <h2>Controle de entradas e saídas</h2>
+          </div>
+        </div>
+
+        <form id="finance-form" class="form-grid small-grid">
+          <label>
+            Descrição
+            <input type="text" name="descricao" placeholder="Ex.: Venda de bolo de aniversário" required />
+          </label>
+
+          <label>
+            Tipo
+            <select name="tipo">
+              <option value="entrada">Entrada</option>
+              <option value="saida">Saída</option>
+            </select>
+          </label>
+
+          <label>
+            Valor
+            <input type="number" name="valor" min="0" step="0.01" placeholder="150.00" required />
+          </label>
+
+          <label>
+            Data
+            <input type="date" name="data" required />
+          </label>
+
+          <label class="checkbox-field full-width">
+            <input type="checkbox" name="lgpd" />
+            <span>Li e concordo com a Política de Privacidade e com a proteção dos meus dados conforme a LGPD.</span>
+          </label>
+
+          <div class="form-actions full-width">
+            <button type="submit" class="primary-btn">Registrar</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="panel">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Resumo</p>
+            <h2>Movimentações financeiras</h2>
+          </div>
+          <button id="print-finance" class="secondary-btn" type="button">Imprimir resumo</button>
+        </div>
+        <div id="finance-list" class="finance-list" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <section class="panel lgpd-section" aria-label="Normas LGPD">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">LGPD</p>
+          <h2>Política de privacidade e proteção de dados</h2>
+        </div>
+      </div>
+
+      <div class="lgpd-grid">
+        <article class="lgpd-item">
+          <h3>Coleta de dados</h3>
+          <p>
+            Coletamos apenas as informações necessárias para registrar pedidos, contato e
+            entrega, como nome, WhatsApp, endereço e detalhes do pedido.
+          </p>
+        </article>
+
+        <article class="lgpd-item">
+          <h3>Uso dos dados</h3>
+          <p>
+            Os dados são usados exclusivamente para atendimento, comunicação, confirmação de
+            pedidos e organização do negócio da Tatis Bolos.
+          </p>
+        </article>
+
+        <article class="lgpd-item">
+          <h3>Segurança</h3>
+          <p>
+            Mantemos os dados protegidos e evitamos compartilhamento com terceiros, salvo
+            quando exigido por lei ou necessário para execução do serviço.
+          </p>
+        </article>
+      </div>
+
+      <p class="lgpd-note">
+        Ao entrar em contato, enviar mensagem ou preencher dados no site, você concorda com
+        o uso dessas informações para fins de atendimento e organização dos pedidos.
+      </p>
+    </section>
+
+    <footer id="contato" class="footer">
+      <p>© 2026 Tatis Bolos • Confeitaria artesanal e personalização</p>
+    </footer>
+
+    <div id="print-area" class="print-area" aria-live="polite"></div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
